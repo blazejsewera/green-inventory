@@ -1,5 +1,5 @@
 import { Container, Grid } from '@mantine/core'
-import { StatsCard, StatsRingProps } from './StatsRing'
+import { StatsCard, StatsRingProps } from './StatsCard'
 
 export function DashboardGrid() {
   const statsData: StatsRingProps = {
