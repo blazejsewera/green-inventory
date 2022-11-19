@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { MainPage } from './pages/MainPage'
 import { DebugSewera } from './pages/DebugSewera'
 import { DebugKoccov } from './pages/DebugKoccov'
+import { DashboardGrid } from './components/dashboard/DashboardGrid'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'dashboard',
-        element: <h1>DASHBOARD</h1>,
+        element: <DashboardGrid/>,
       },
       {
         path: 'stock',
