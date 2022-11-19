@@ -8,6 +8,10 @@ export type State = {
   addOrUpdateNote: (note: Note) => void
   deleteNote: (note: Note) => void
   setNotes: (notes: Note[]) => void
+  darkMode: boolean
+  darkModeOn: () => void
+  darkModeOff: () => void
+  darkModeToggle: () => void
 }
 
 export type SetState = (
@@ -19,6 +23,10 @@ const store = (set: SetState): State => ({
   addOrUpdateNote: note => set(prev => ({ notes: { ...prev.notes, [note.id]: note } })),
   deleteNote: note => set(prev => ({ notes: deleteFromRecord(prev.notes, note) })),
   setNotes: notes => set({ notes: recordFromIdArray(notes) }),
+  darkMode: true,
+  darkModeOn: () => set({ darkMode: true }),
+  darkModeOff: () => set({ darkMode: false }),
+  darkModeToggle: () => set(prev => ({ darkMode: !prev.darkMode })),
 })
 
 const storeWithMiddleware = devtools(store)

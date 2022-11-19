@@ -978,12 +978,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/ds@npm:^5.8.2":
+  version: 5.8.2
+  resolution: "@mantine/ds@npm:5.8.2"
+  dependencies:
+    "@mantine/utils": 5.8.2
+  peerDependencies:
+    "@mantine/core": 5.8.2
+    "@mantine/hooks": 5.8.2
+    "@mantine/prism": 5.8.2
+    "@tabler/icons": "*"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 820cfb71111c56e8b127b20cf92a61ea25ea9a4f51604de5560c61dbcaf927db4e33a5b1f52fcbfcfb1134797d7b55ad08bd470177c9e9ae30be097aee2b56f7
+  languageName: node
+  linkType: hard
+
 "@mantine/hooks@npm:^5.7.2":
   version: 5.7.2
   resolution: "@mantine/hooks@npm:5.7.2"
   peerDependencies:
     react: ">=16.8.0"
   checksum: 85977a0f3968be3ab5556e79cd378f210be3ffa0b4b3c59e995848ec05d8a8c9c340d2bfcbd1900fe05495a8c2a977653233f793a304984f5dc1f626d4d6b386
+  languageName: node
+  linkType: hard
+
+"@mantine/prism@npm:^5.8.2":
+  version: 5.8.2
+  resolution: "@mantine/prism@npm:5.8.2"
+  dependencies:
+    "@mantine/utils": 5.8.2
+    prism-react-renderer: ^1.2.1
+  peerDependencies:
+    "@mantine/core": 5.8.2
+    "@mantine/hooks": 5.8.2
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: c98fa6f0bbad6a35b9c1e57dbdf3e2fb5d10fd14f7f7efcbb4a83a0b7bc1f9efa4b8ff5f14ef5984b2719e206fd8c08c59674838840cfbb6712037479b319a5f
   languageName: node
   linkType: hard
 
@@ -1007,6 +1038,15 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 35ce46a03a24f8f2b649b833b725120e50e639a66a3a9b399a10f5c4083446a4338ececd8b1d6f0897743cb1bc6d6757c7a530c515f032c0ab23b4f8e9d04b2a
+  languageName: node
+  linkType: hard
+
+"@mantine/utils@npm:5.8.2":
+  version: 5.8.2
+  resolution: "@mantine/utils@npm:5.8.2"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: bb6b1de7e8bee92751410e634e7e475ea38eef4d822ee955aa885a739c4379c8d8cbdc12aee570b6c1dcf83ae1202297f1f1c3d78b11de3e3ffe64076edd3a71
   languageName: node
   linkType: hard
 
@@ -1192,6 +1232,21 @@ __metadata:
   dependencies:
     "@sinonjs/commons": ^1.7.0
   checksum: 7d3aef54e17c1073101cb64d953157c19d62a40e261a30923fa1ee337b049c5f29cc47b1f0c477880f42b5659848ba9ab897607ac8ea4acd5c30ddcfac57fca6
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:^1.112.0":
+  version: 1.112.0
+  resolution: "@tabler/icons@npm:1.112.0"
+  peerDependencies:
+    react: ^16.x || 17.x || 18.x
+    react-dom: ^16.x || 17.x || 18.x
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: a1a2a5a3c8019212e2b57295ee383aa36b5b6a4762f8b6dbe6fec30385ef748cba91235fcfe54d28580098103397f2f2790348217e4bade2f8a572727abb4833
   languageName: node
   linkType: hard
 
@@ -3847,6 +3902,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prism-react-renderer@npm:^1.2.1":
+  version: 1.3.5
+  resolution: "prism-react-renderer@npm:1.3.5"
+  peerDependencies:
+    react: ">=0.14.9"
+  checksum: c18806dcbc4c0b4fd6fd15bd06b4f7c0a6da98d93af235c3e970854994eb9b59e23315abb6cfc29e69da26d36709a47e25da85ab27fed81b6812f0a52caf6dfa
+  languageName: node
+  linkType: hard
+
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -4514,7 +4578,10 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.5
     "@mantine/core": ^5.7.2
+    "@mantine/ds": ^5.8.2
     "@mantine/hooks": ^5.7.2
+    "@mantine/prism": ^5.8.2
+    "@tabler/icons": ^1.112.0
     "@types/jest": ^29.2.3
     "@types/react": ^18.0.24
     "@types/react-dom": ^18.0.8
