@@ -35,6 +35,10 @@ const router = createBrowserRouter([
         path: 'settings',
         element: <h1>SETTINGS</h1>,
       },
+      {
+        path: '_debug_sewera',
+        element: <DebugSewera />,
+      },
     ],
   },
   {
@@ -44,10 +48,6 @@ const router = createBrowserRouter([
   {
     path: '/_debug_koccov',
     element: <DebugKoccov />,
-  },
-  {
-    path: '/_debug_sewera',
-    element: <DebugSewera />,
   },
 ])
 

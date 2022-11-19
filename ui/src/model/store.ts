@@ -1,13 +1,13 @@
 import create from 'zustand'
 import { devtools } from 'zustand/middleware'
-import { Note } from '../domain/Note'
+import { Item } from '../domain/Item'
 import { deleteFromRecord, recordFromIdArray } from '../util/data/records'
 
 export type State = {
-  notes: Record<string, Note>
-  addOrUpdateNote: (note: Note) => void
-  deleteNote: (note: Note) => void
-  setNotes: (notes: Note[]) => void
+  items: Record<string, Item>
+  addOrUpdateItem: (item: Item) => void
+  deleteItem: (item: Item) => void
+  setItems: (items: Item[]) => void
   colorScheme: 'light' | 'dark'
   darkModeToggle: (colorScheme?: 'light' | 'dark') => void
 }
@@ -17,10 +17,10 @@ export type SetState = (
   replace?: boolean | undefined,
 ) => void
 const store = (set: SetState): State => ({
-  notes: {},
-  addOrUpdateNote: note => set(prev => ({ notes: { ...prev.notes, [note.id]: note } })),
-  deleteNote: note => set(prev => ({ notes: deleteFromRecord(prev.notes, note) })),
-  setNotes: notes => set({ notes: recordFromIdArray(notes) }),
+  items: {},
+  addOrUpdateItem: item => set(prev => ({ items: { ...prev.items, [item.id]: item } })),
+  deleteItem: item => set(prev => ({ items: deleteFromRecord(prev.items, item) })),
+  setItems: items => set({ items: recordFromIdArray(items) }),
   colorScheme: 'dark',
   darkModeToggle: (colorScheme?: 'light' | 'dark') =>
     set(prev => {
