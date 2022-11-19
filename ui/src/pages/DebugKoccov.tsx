@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { DarkmodeToggle } from '../components/DarkmodeToggle'
 import { NavbarMinimal } from '../components/NavbarMinimal'
 import { useStore } from '../data/store'
-export const DebugSewera = () => {
+export const DebugKoccov = () => {
   const darkMode = useStore(state => state.darkMode)
   const darkModeToggle = useStore(state => state.darkModeToggle)
   const darkModeOn = useStore(state => state.darkModeOn)
