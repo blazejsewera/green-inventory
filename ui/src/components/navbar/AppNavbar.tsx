@@ -14,20 +14,20 @@ import { MantineLogo } from '@mantine/ds'
 import { NavbarLink } from './NavbarLink'
 import { DarkmodeToggle } from './DarkmodeToggle'
 
-const mockdata = [
-  { icon: IconHome2, label: 'Home' },
-  { icon: IconGauge, label: 'Dashboard' },
-  { icon: IconBox, label: 'On stock' },
-  { icon: IconArrowsExchange, label: 'Distributed' },
-  { icon: IconRecycle, label: 'Repairs' },
-  { icon: IconUser, label: 'Account' },
-  { icon: IconSettings, label: 'Settings' },
+const linkData = [
+  { icon: IconHome2, label: 'Home', target: '/' },
+  { icon: IconGauge, label: 'Dashboard', target: '/dashboard' },
+  { icon: IconBox, label: 'On stock', target: '/stock' },
+  { icon: IconArrowsExchange, label: 'Distributed', target: '/distributed' },
+  { icon: IconRecycle, label: 'Repairs', target: '/repairs' },
+  { icon: IconUser, label: 'Account', target: '/account' },
+  { icon: IconSettings, label: 'Settings', target: '/settings' },
 ]
 
 export const AppNavbar = () => {
   const [active, setActive] = useState(2)
 
-  const links = mockdata.map((link, index) => (
+  const links = linkData.map((link, index) => (
     <NavbarLink {...link} key={link.label} active={index === active} onClick={() => setActive(index)} />
   ))
 
@@ -44,7 +44,7 @@ export const AppNavbar = () => {
       <Navbar.Section>
         <Stack justify="center" spacing={0}>
           <DarkmodeToggle />
-          <NavbarLink icon={IconLogout} label="Logout" />
+          <NavbarLink icon={IconLogout} label="Logout" target="/logout" />
         </Stack>
       </Navbar.Section>
     </Navbar>

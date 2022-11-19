@@ -9,6 +9,36 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+    children: [
+      {
+        path: 'dashboard',
+        element: <h1>DASHBOARD</h1>,
+      },
+      {
+        path: 'stock',
+        element: <h1>STONK</h1>,
+      },
+      {
+        path: 'distributed',
+        element: <h1>DIST</h1>,
+      },
+      {
+        path: 'repairs',
+        element: <h1>REPAIRS</h1>,
+      },
+      {
+        path: 'account',
+        element: <h1>ACCOUNT</h1>,
+      },
+      {
+        path: 'settings',
+        element: <h1>SETTINGS</h1>,
+      },
+    ],
+  },
+  {
+    path: 'logout',
+    element: <h1>LOGOUT</h1>,
   },
   {
     path: '/_debug_koccov',

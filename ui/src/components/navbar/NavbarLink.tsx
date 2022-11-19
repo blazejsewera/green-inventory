@@ -1,11 +1,16 @@
 import { createStyles, Tooltip, UnstyledButton } from '@mantine/core'
 import { TablerIcon } from '@tabler/icons'
+import { Link } from 'react-router-dom'
 
-interface NavbarLinkProps {
+interface NavbarButtonProps {
   icon: TablerIcon
   label: string
   active?: boolean
-  onClick?(): void
+  onClick?: () => void
+}
+
+interface NavbarLinkProps extends NavbarButtonProps {
+  target: string
 }
 
 const useStyles = createStyles(theme => ({
@@ -31,13 +36,23 @@ const useStyles = createStyles(theme => ({
   },
 }))
 
-export const NavbarLink = ({ icon: Icon, label, active, onClick }: NavbarLinkProps) => {
+export const NavbarLink: FC<NavbarLinkProps> = ({ icon, label, target, active, onClick }) => {
+  return (
+    <Link to={target}>
+      <NavbarButton {...{ icon, label, active, onClick }} />
+    </Link>
+  )
+}
+
+export const NavbarButton: FC<NavbarButtonProps> = ({ icon: Icon, label, active, onClick }) => {
   const { classes, cx } = useStyles()
   return (
-    <Tooltip label={label} position="right" transitionDuration={0}>
-      <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
-        <Icon stroke={1.5} />
-      </UnstyledButton>
-    </Tooltip>
+    <div onClick={onClick}>
+      <Tooltip label={label} position="right" transitionDuration={0}>
+        <UnstyledButton className={cx(classes.link, { [classes.active]: active })}>
+          <Icon stroke={1.5} />
+        </UnstyledButton>
+      </Tooltip>
+    </div>
   )
 }

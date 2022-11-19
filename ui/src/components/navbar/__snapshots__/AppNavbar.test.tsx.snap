@@ -36,287 +36,343 @@ exports[`AppNavbar renders properly 1`] = `
     <div
       className="mantine-Stack-root mantine-1h8zs6q"
     >
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+      <a
+        href="#/"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-home-2"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <polyline
-            points="5 12 3 12 12 3 21 12 19 12"
-          />
-          <path
-            d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
-          />
-          <rect
-            height={4}
-            width={4}
-            x={10}
-            y={12}
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-home-2"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <polyline
+                points="5 12 3 12 12 3 21 12 19 12"
+              />
+              <path
+                d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+              />
+              <rect
+                height={4}
+                width={4}
+                x={10}
+                y={12}
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/dashboard"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-gauge"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <circle
-            cx={12}
-            cy={12}
-            r={9}
-          />
-          <circle
-            cx={12}
-            cy={12}
-            r={1}
-          />
-          <line
-            x1={13.41}
-            x2={16}
-            y1={10.59}
-            y2={8}
-          />
-          <path
-            d="M7 12a5 5 0 0 1 5 -5"
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-x0xgon"
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-gauge"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <circle
+                cx={12}
+                cy={12}
+                r={9}
+              />
+              <circle
+                cx={12}
+                cy={12}
+                r={1}
+              />
+              <line
+                x1={13.41}
+                x2={16}
+                y1={10.59}
+                y2={8}
+              />
+              <path
+                d="M7 12a5 5 0 0 1 5 -5"
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/stock"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-box"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <polyline
-            points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
-          />
-          <line
-            x1={12}
-            x2={20}
-            y1={12}
-            y2={7.5}
-          />
-          <line
-            x1={12}
-            x2={12}
-            y1={12}
-            y2={21}
-          />
-          <line
-            x1={12}
-            x2={4}
-            y1={12}
-            y2={7.5}
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+          <button
+            className="mantine-UnstyledButton-root mantine-x0xgon"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-box"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <polyline
+                points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
+              />
+              <line
+                x1={12}
+                x2={20}
+                y1={12}
+                y2={7.5}
+              />
+              <line
+                x1={12}
+                x2={12}
+                y1={12}
+                y2={21}
+              />
+              <line
+                x1={12}
+                x2={4}
+                y1={12}
+                y2={7.5}
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/distributed"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-arrows-exchange"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <path
-            d="M7 10h14l-4 -4"
-          />
-          <path
-            d="M17 14h-14l4 4"
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-arrows-exchange"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M7 10h14l-4 -4"
+              />
+              <path
+                d="M17 14h-14l4 4"
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/repairs"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-recycle"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <path
-            d="M12 17l-2 2l2 2"
-          />
-          <path
-            d="M10 19h9a2 2 0 0 0 1.75 -2.75l-.55 -1"
-          />
-          <path
-            d="M8.536 11l-.732 -2.732l-2.732 .732"
-          />
-          <path
-            d="M7.804 8.268l-4.5 7.794a2 2 0 0 0 1.506 2.89l1.141 .024"
-          />
-          <path
-            d="M15.464 11l2.732 .732l.732 -2.732"
-          />
-          <path
-            d="M18.196 11.732l-4.5 -7.794a2 2 0 0 0 -3.256 -.14l-.591 .976"
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-recycle"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M12 17l-2 2l2 2"
+              />
+              <path
+                d="M10 19h9a2 2 0 0 0 1.75 -2.75l-.55 -1"
+              />
+              <path
+                d="M8.536 11l-.732 -2.732l-2.732 .732"
+              />
+              <path
+                d="M7.804 8.268l-4.5 7.794a2 2 0 0 0 1.506 2.89l1.141 .024"
+              />
+              <path
+                d="M15.464 11l2.732 .732l.732 -2.732"
+              />
+              <path
+                d="M18.196 11.732l-4.5 -7.794a2 2 0 0 0 -3.256 -.14l-.591 .976"
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/account"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-user"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <circle
-            cx={12}
-            cy={7}
-            r={4}
-          />
-          <path
-            d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-user"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <circle
+                cx={12}
+                cy={7}
+                r={4}
+              />
+              <path
+                d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
+      <a
+        href="#/settings"
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-settings"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          onClick={[Function]}
         >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <path
-            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
-          />
-          <circle
-            cx={12}
-            cy={12}
-            r={3}
-          />
-        </svg>
-      </button>
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-settings"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+              />
+              <circle
+                cx={12}
+                cy={12}
+                r={3}
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
     </div>
   </div>
   <div
@@ -325,74 +381,84 @@ exports[`AppNavbar renders properly 1`] = `
     <div
       className="mantine-Stack-root mantine-1h8zs6q"
     >
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
+      <div
         onClick={[Function]}
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
       >
-        <svg
-          className="icon icon-tabler icon-tabler-moon-stars"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          className="mantine-UnstyledButton-root mantine-6fphkd"
+          onMouseMove={[Function]}
+          onPointerDown={[Function]}
+          onPointerEnter={[Function]}
+          type="button"
         >
-          <path
-            d="M0 0h24v24H0z"
+          <svg
+            className="icon icon-tabler icon-tabler-moon-stars"
             fill="none"
-            stroke="none"
-          />
-          <path
-            d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-          />
-          <path
-            d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
-          />
-          <path
-            d="M19 11h2m-1 -1v2"
-          />
-        </svg>
-      </button>
-      <button
-        className="mantine-UnstyledButton-root mantine-6fphkd"
-        onMouseMove={[Function]}
-        onPointerDown={[Function]}
-        onPointerEnter={[Function]}
-        type="button"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            viewBox="0 0 24 24"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+              stroke="none"
+            />
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            />
+            <path
+              d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+            />
+            <path
+              d="M19 11h2m-1 -1v2"
+            />
+          </svg>
+        </button>
+      </div>
+      <a
+        href="#/logout"
+        onClick={[Function]}
       >
-        <svg
-          className="icon icon-tabler icon-tabler-logout"
-          fill="none"
-          height={24}
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          viewBox="0 0 24 24"
-          width={24}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 0h24v24H0z"
-            fill="none"
-            stroke="none"
-          />
-          <path
-            d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
-          />
-          <path
-            d="M7 12h14l-3 -3m0 6l3 -3"
-          />
-        </svg>
-      </button>
+        <div>
+          <button
+            className="mantine-UnstyledButton-root mantine-6fphkd"
+            onMouseMove={[Function]}
+            onPointerDown={[Function]}
+            onPointerEnter={[Function]}
+            type="button"
+          >
+            <svg
+              className="icon icon-tabler icon-tabler-logout"
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.5}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+                stroke="none"
+              />
+              <path
+                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+              />
+              <path
+                d="M7 12h14l-3 -3m0 6l3 -3"
+              />
+            </svg>
+          </button>
+        </div>
+      </a>
     </div>
   </div>
 </nav>

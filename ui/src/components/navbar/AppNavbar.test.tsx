@@ -1,14 +1,17 @@
 import { ColorSchemeProvider } from '@mantine/core'
-import { act } from 'react-test-renderer'
+import { Router } from 'react-router'
+import { HashRouter } from 'react-router-dom'
 import { snap } from '../../util/test/snapshot'
 import { AppNavbar } from './AppNavbar'
 
 describe('AppNavbar', () => {
   it('renders properly', () => {
     const s = snap(
-      <ColorSchemeProvider colorScheme="light" toggleColorScheme={() => {}}>
-        <AppNavbar />
-      </ColorSchemeProvider>,
+      <HashRouter>
+        <ColorSchemeProvider colorScheme="light" toggleColorScheme={() => {}}>
+          <AppNavbar />
+        </ColorSchemeProvider>
+      </HashRouter>,
     )
     expect(s).toMatchSnapshot()
   })

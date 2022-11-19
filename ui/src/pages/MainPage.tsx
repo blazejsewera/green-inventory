@@ -1,24 +1,28 @@
-import { Container, MantineProvider, Title } from '@mantine/core'
+import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
 import { useEffect } from 'react'
-import { NoteList } from '../components/NoteList'
-import { fetchNotes, streamNotes } from '../data/fetch'
-import { useStore } from '../data/store'
+import { Outlet } from 'react-router-dom'
+import { AppNavbar } from '../components/navbar/AppNavbar'
+import { useStore } from '../model/store'
 export const MainPage = () => {
+  const colorScheme = useStore(state => state.colorScheme)
+  const darkModeToggle = useStore(state => state.darkModeToggle)
+
+  const checkForDarkModePreference = () => {
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? darkModeToggle('dark') : darkModeToggle('light')
+  }
+
   useEffect(() => {
-    const { addOrUpdateNote, deleteNote, setNotes } = useStore.getState()
-    fetchNotes(setNotes)
-    streamNotes(addOrUpdateNote, addOrUpdateNote, deleteNote)
+    checkForDarkModePreference()
   }, [])
 
-  const notes = useStore(state => Object.values(state.notes))
-
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <div className="App">Hello</div>
-      <Container size="xs" p="md">
-        <Title order={2}>Fetched notes</Title>
-        <NoteList {...{ notes }} />
-      </Container>
-    </MantineProvider>
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={darkModeToggle}>
+      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+        <AppNavbar />
+        <div style={{ marginLeft: '80px' }}>
+          <Outlet />
+        </div>
+      </MantineProvider>
+    </ColorSchemeProvider>
   )
 }

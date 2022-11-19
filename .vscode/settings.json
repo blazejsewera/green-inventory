@@ -7,7 +7,7 @@
   "typescript.preferences.importModuleSpecifier": "relative",
 
   // jest
-  "jest.autoRun": { "watch": false, "onSave": "test-src-file" },
+  "jest.autoRun": "off",
   "jest.jestCommandLine": "yarn test",
   "jest.rootPath": "ui",
   "jest.enableCodeLens": false,

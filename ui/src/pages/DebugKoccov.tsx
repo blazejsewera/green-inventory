@@ -1,44 +1,23 @@
 import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
 import { useEffect } from 'react'
 import { AppNavbar } from '../components/navbar/AppNavbar'
-import { DarkmodeToggle } from '../components/navbar/DarkmodeToggle'
-import { useStore } from '../data/store'
+import { useStore } from '../model/store'
 export const DebugKoccov = () => {
-  const darkMode = useStore(state => state.darkMode)
+  const colorScheme = useStore(state => state.colorScheme)
   const darkModeToggle = useStore(state => state.darkModeToggle)
-  const darkModeOn = useStore(state => state.darkModeOn)
-  const darkModeOff = useStore(state => state.darkModeOff)
 
   const checkForDarkModePreference = () => {
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? darkModeOn() : darkModeOff()
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? darkModeToggle('dark') : darkModeToggle('light')
   }
 
   useEffect(() => {
     checkForDarkModePreference()
   }, [])
 
-  type ColorScheme = 'dark' | 'light'
-  const toggleColorScheme = (colorScheme?: ColorScheme) => {
-    switch (colorScheme) {
-      case 'dark':
-        darkModeOn()
-        break
-      case 'light':
-        darkModeOff()
-        break
-      default:
-        darkModeToggle()
-        break
-    }
-  }
-
-  const getColorScheme = (): ColorScheme => (darkMode ? 'dark' : 'light')
-
   return (
-    <ColorSchemeProvider colorScheme={getColorScheme()} toggleColorScheme={toggleColorScheme}>
-      <MantineProvider theme={{ colorScheme: getColorScheme() }} withGlobalStyles withNormalizeCSS>
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={darkModeToggle}>
+      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
         <AppNavbar />
-        <DarkmodeToggle />
       </MantineProvider>
     </ColorSchemeProvider>
   )
