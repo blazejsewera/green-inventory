@@ -11,6 +11,10 @@ import {
   IconSettings,
   IconLogout,
   IconSwitchHorizontal,
+  IconBox,
+  IconArrowsDiagonal,
+  IconArrowsExchange,
+  IconRecycle,
 } from '@tabler/icons'
 import { MantineLogo } from '@mantine/ds'
 import { NavbarLink } from './NavbarLink'
@@ -19,10 +23,10 @@ import { DarkmodeToggle } from './DarkmodeToggle'
 const mockdata = [
   { icon: IconHome2, label: 'Home' },
   { icon: IconGauge, label: 'Dashboard' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: IconCalendarStats, label: 'Releases' },
+  { icon: IconBox, label: 'On stock' },
+  { icon: IconArrowsExchange, label: 'Distributed' },
+  { icon: IconRecycle, label: 'Repairs' },
   { icon: IconUser, label: 'Account' },
-  { icon: IconFingerprint, label: 'Security' },
   { icon: IconSettings, label: 'Settings' },
 ]
 
