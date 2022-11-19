@@ -1,24 +1,47 @@
-import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
-import { useEffect } from 'react'
-import { AppNavbar } from '../components/navbar/AppNavbar'
-import { useStore } from '../model/store'
+import { InventoryList } from '../components/inventory/InventoryList'
+
 export const DebugSewera = () => {
-  const colorScheme = useStore(state => state.colorScheme)
-  const darkModeToggle = useStore(state => state.darkModeToggle)
-
-  const checkForDarkModePreference = () => {
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? darkModeToggle('dark') : darkModeToggle('light')
-  }
-
-  useEffect(() => {
-    checkForDarkModePreference()
-  }, [])
-
-  return (
-    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={darkModeToggle}>
-      <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <AppNavbar />
-      </MantineProvider>
-    </ColorSchemeProvider>
-  )
+  const data = [
+    {
+      id: '1',
+      name: 'Monitor 1',
+      category: 'IT',
+      quantity: 100,
+      purpose: 'Graphic design',
+      internalInventoryNo: '01234',
+      producer: 'Dell',
+      producerCode: 'D01234',
+    },
+    {
+      id: '2',
+      name: 'Laptop 2',
+      category: 'IT',
+      quantity: 50,
+      purpose: 'Programming',
+      internalInventoryNo: '01234',
+      producer: 'Dell',
+      producerCode: 'D01234',
+    },
+    {
+      id: '3',
+      name: 'Printer 3',
+      category: 'Production',
+      quantity: 2,
+      purpose: 'Graphic design',
+      internalInventoryNo: '01234',
+      producer: 'Dell',
+      producerCode: 'D01234',
+    },
+    {
+      id: '4',
+      name: 'Mouse 4',
+      category: 'Utilities',
+      quantity: 10,
+      purpose: 'Gaming',
+      internalInventoryNo: '01234',
+      producer: 'Dell',
+      producerCode: 'D01234',
+    },
+  ]
+  return <InventoryList data={data} />
 }
