@@ -1,7 +1,7 @@
 import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
 import { useEffect } from 'react'
-import { DarkmodeToggle } from '../components/DarkmodeToggle'
-import { NavbarMinimal } from '../components/NavbarMinimal'
+import { AppNavbar } from '../components/navbar/AppNavbar'
+import { DarkmodeToggle } from '../components/navbar/DarkmodeToggle'
 import { useStore } from '../data/store'
 export const DebugKoccov = () => {
   const darkMode = useStore(state => state.darkMode)
@@ -37,7 +37,7 @@ export const DebugKoccov = () => {
   return (
     <ColorSchemeProvider colorScheme={getColorScheme()} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme: getColorScheme() }} withGlobalStyles withNormalizeCSS>
-        <NavbarMinimal />
+        <AppNavbar />
         <DarkmodeToggle />
       </MantineProvider>
     </ColorSchemeProvider>
