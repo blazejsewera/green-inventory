@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Table, ScrollArea, Text, TextInput } from '@mantine/core'
+import { Table, ScrollArea, Text, TextInput, createStyles, Button, ActionIcon } from '@mantine/core'
 import { keys } from '@mantine/utils'
-import { IconSearch } from '@tabler/icons'
+import { IconDotsVertical, IconSearch } from '@tabler/icons'
 import { InventoryListHeader } from './InventoryListHeader'
 import { Item } from '../../domain/Item'
 
-interface TableSortProps {
+interface InventoryListProps {
   data: Item[]
 }
 
@@ -42,7 +42,13 @@ function sortData(data: Item[], payload: { sortBy: keyof Item | null; reversed: 
   )
 }
 
-export const InventoryList: FC<TableSortProps> = ({ data }) => {
+const useStyles = createStyles(theme => ({
+  th: {
+    padding: '0 !important',
+  },
+}))
+
+export const InventoryList: FC<InventoryListProps> = ({ data }) => {
   const [search, setSearch] = useState('')
   const [sortedData, setSortedData] = useState(data)
   const [sortBy, setSortBy] = useState<keyof Item | null>(null)
@@ -71,6 +77,11 @@ export const InventoryList: FC<TableSortProps> = ({ data }) => {
         <td>{internalInventoryNo}</td>
         <td>{producer}</td>
         <td>{producerCode}</td>
+        <td>
+          <ActionIcon variant="default">
+            <IconDotsVertical size={16} />
+          </ActionIcon>
+        </td>
       </tr>
     ),
   )
@@ -94,7 +105,7 @@ export const InventoryList: FC<TableSortProps> = ({ data }) => {
         value={search}
         onChange={handleSearchChange}
       />
-      <Table horizontalSpacing="md" verticalSpacing="xs" sx={{ tableLayout: 'fixed', minWidth: 700 }}>
+      <Table horizontalSpacing="md" verticalSpacing="xs" sx={{ minWidth: 700 }}>
         <thead>
           <tr>
             <Th colName="name" />
@@ -104,6 +115,11 @@ export const InventoryList: FC<TableSortProps> = ({ data }) => {
             <Th colName="internalInventoryNo" display="Inventory No" />
             <Th colName="producer" />
             <Th colName="producerCode" display="Producer Code" />
+            <th className={useStyles().classes.th}>
+              <Text weight={500} size="sm">
+                Actions
+              </Text>
+            </th>
           </tr>
         </thead>
         <tbody>

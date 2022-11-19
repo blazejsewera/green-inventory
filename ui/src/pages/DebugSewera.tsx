@@ -1,3 +1,4 @@
+import { Center, Stack, Title } from '@mantine/core'
 import { InventoryList } from '../components/inventory/InventoryList'
 
 export const DebugSewera = () => {
@@ -43,5 +44,10 @@ export const DebugSewera = () => {
       producerCode: 'D01234',
     },
   ]
-  return <InventoryList data={data} />
+  return (
+    <>
+      <Title>Items on stonk</Title>
+      <InventoryList data={data} />
+    </>
+  )
 }

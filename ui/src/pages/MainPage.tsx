@@ -1,4 +1,4 @@
-import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
+import { ColorSchemeProvider, MantineProvider, Stack } from '@mantine/core'
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import { AppNavbar } from '../components/navbar/AppNavbar'
@@ -20,7 +20,9 @@ export const MainPage = () => {
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
         <AppNavbar />
         <div style={{ marginLeft: '80px' }}>
-          <Outlet />
+          <Stack px={30} pt={10}>
+            <Outlet />
+          </Stack>
         </div>
       </MantineProvider>
     </ColorSchemeProvider>
