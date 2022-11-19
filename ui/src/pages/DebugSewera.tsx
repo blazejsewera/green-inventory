@@ -1,5 +1,5 @@
 import { Button, MantineProvider } from '@mantine/core'
-export const MantineShowcase = () => (
+export const DebugSewera = () => (
   <MantineProvider withGlobalStyles withNormalizeCSS>
     <p>Hello</p>
     <Button>Click me!</Button>
