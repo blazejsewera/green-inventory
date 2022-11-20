@@ -10,6 +10,9 @@ export type State = {
   setItems: (items: Item[]) => void
   colorScheme: 'light' | 'dark'
   darkModeToggle: (colorScheme?: 'light' | 'dark') => void
+
+  addItemModalOpened: boolean
+  setAddItemModalOpened: (s: boolean) => void
 }
 
 export type SetState = (
@@ -34,6 +37,8 @@ const store = (set: SetState): State => ({
           break
       }
     }),
+  addItemModalOpened: false,
+  setAddItemModalOpened: s => set({ addItemModalOpened: s }),
 })
 
 const storeWithMiddleware = devtools(store)

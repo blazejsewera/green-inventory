@@ -5,6 +5,7 @@ import { MainPage } from './pages/MainPage'
 import { DebugSewera } from './pages/DebugSewera'
 import { DebugKoccov } from './pages/DebugKoccov'
 import { DashboardGrid } from './components/dashboard/DashboardGrid'
+import { OnStock } from './pages/OnStock'
 
 const router = createBrowserRouter([
   {
@@ -13,11 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'dashboard',
-        element: <DashboardGrid/>,
+        element: <DashboardGrid />,
       },
       {
         path: 'stock',
-        element: <h1>STONK</h1>,
+        element: <OnStock />,
       },
       {
         path: 'distributed',

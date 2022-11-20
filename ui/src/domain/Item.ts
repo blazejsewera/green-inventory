@@ -1,3 +1,5 @@
+export type Status = 'onStock' | 'distributed' | 'inRepair' | 'tradedIn' | 'donated' | 'gaveAway' | 'scrapped'
+
 export type Item = {
   id: string
   name?: string
@@ -7,4 +9,9 @@ export type Item = {
   internalInventoryNo?: string
   producer?: string
   producerCode?: string
+  repairUrl?: string
+  tradeInUrl?: string
+  status?: Status
 }
+
+export type PartialItem = Partial<Item>

@@ -4,9 +4,10 @@ import { keys } from '@mantine/utils'
 import { IconDotsVertical, IconSearch } from '@tabler/icons'
 import { InventoryListHeader } from './InventoryListHeader'
 import { Item } from '../../domain/Item'
+import { useEffect } from 'react'
 
 interface InventoryListProps {
-  data: Item[]
+  data: Record<string, Item>
 }
 
 function filterData(data: Item[], search: string) {
@@ -23,8 +24,8 @@ function sortData(data: Item[], payload: { sortBy: keyof Item | null; reversed: 
 
   return filterData(
     [...data].sort((a, b) => {
-      const left = a[sortBy] ?? 0
-      const right = b[sortBy] ?? 1
+      const left: string | number = a[sortBy] ?? 0
+      const right: string | number = b[sortBy] ?? 1
       if (typeof left === 'number' && typeof right === 'number') {
         if (payload.reversed) return left - right
         return right - left
@@ -48,11 +49,16 @@ const useStyles = createStyles(theme => ({
   },
 }))
 
-export const InventoryList: FC<InventoryListProps> = ({ data }) => {
+export const InventoryList: FC<InventoryListProps> = props => {
+  const data = Object.values(props.data)
   const [search, setSearch] = useState('')
   const [sortedData, setSortedData] = useState(data)
   const [sortBy, setSortBy] = useState<keyof Item | null>(null)
   const [reverseSortDirection, setReverseSortDirection] = useState(false)
+
+  useEffect(() => {
+    setSortedData(sortData(data, { sortBy, reversed: reverseSortDirection, search }))
+  })
 
   const setSorting = (field: keyof Item) => {
     const reversed = field === sortBy ? !reverseSortDirection : false
@@ -127,7 +133,7 @@ export const InventoryList: FC<InventoryListProps> = ({ data }) => {
             rows
           ) : (
             <tr>
-              <td colSpan={Object.keys(data[0]).length}>
+              <td colSpan={8}>
                 <Text weight={500} align="center">
                   Nothing found
                 </Text>
