@@ -74,7 +74,19 @@ export const InventoryList: FC<InventoryListProps> = props => {
   }
 
   const rows = sortedData.map(
-    ({ id, name, category, quantity, purpose, internalInventoryNo, producer, producerCode, isBroken }) => (
+    ({
+      id,
+      name,
+      category,
+      quantity,
+      purpose,
+      internalInventoryNo,
+      producer,
+      producerCode,
+      repairUrl,
+      tradeInUrl,
+      isBroken,
+    }) => (
       <tr key={id}>
         <td>{name}</td>
         <td>{category}</td>
@@ -93,9 +105,24 @@ export const InventoryList: FC<InventoryListProps> = props => {
             </Popover.Target>
             <Popover.Dropdown>
               <Stack>
-                <Button compact>Repair</Button>
-                <Button compact>Trade in</Button>
-                <Button compact>Donate</Button>
+                <Button
+                  onClick={() => {
+                    window.open(repairUrl, '_blank')
+                  }}
+                  compact
+                  variant="light"
+                >
+                  Repair
+                </Button>
+                <Button
+                  onClick={() => {
+                    window.open(tradeInUrl, '_blank')
+                  }}
+                  compact
+                  variant="light"
+                >
+                  Trade in
+                </Button>
               </Stack>
             </Popover.Dropdown>
           </Popover>
