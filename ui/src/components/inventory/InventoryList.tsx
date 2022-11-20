@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Table, ScrollArea, Text, TextInput, createStyles, Button, ActionIcon } from '@mantine/core'
+import { Table, ScrollArea, Text, TextInput, createStyles, Button, ActionIcon, Popover, Stack } from '@mantine/core'
 import { keys } from '@mantine/utils'
-import { IconDotsVertical, IconSearch } from '@tabler/icons'
+import { IconDotsVertical, IconHeart, IconHeartBroken, IconSearch } from '@tabler/icons'
 import { InventoryListHeader } from './InventoryListHeader'
 import { Item } from '../../domain/Item'
 import { useEffect } from 'react'
@@ -24,8 +24,8 @@ function sortData(data: Item[], payload: { sortBy: keyof Item | null; reversed: 
 
   return filterData(
     [...data].sort((a, b) => {
-      const left: string | number = a[sortBy] ?? 0
-      const right: string | number = b[sortBy] ?? 1
+      const left: string | number | boolean = a[sortBy] ?? 0
+      const right: string | number | boolean = b[sortBy] ?? 1
       if (typeof left === 'number' && typeof right === 'number') {
         if (payload.reversed) return left - right
         return right - left
@@ -74,7 +74,7 @@ export const InventoryList: FC<InventoryListProps> = props => {
   }
 
   const rows = sortedData.map(
-    ({ id, name, category, quantity, purpose, internalInventoryNo, producer, producerCode }) => (
+    ({ id, name, category, quantity, purpose, internalInventoryNo, producer, producerCode, isBroken }) => (
       <tr key={id}>
         <td>{name}</td>
         <td>{category}</td>
@@ -83,10 +83,22 @@ export const InventoryList: FC<InventoryListProps> = props => {
         <td>{internalInventoryNo}</td>
         <td>{producer}</td>
         <td>{producerCode}</td>
+        <td>{isBroken ? <IconHeartBroken size={16} /> : <IconHeart size={16} />}</td>
         <td>
-          <ActionIcon variant="default">
-            <IconDotsVertical size={16} />
-          </ActionIcon>
+          <Popover position="left">
+            <Popover.Target>
+              <ActionIcon variant="default">
+                <IconDotsVertical size={16} />
+              </ActionIcon>
+            </Popover.Target>
+            <Popover.Dropdown>
+              <Stack>
+                <Button compact>Repair</Button>
+                <Button compact>Trade in</Button>
+                <Button compact>Donate</Button>
+              </Stack>
+            </Popover.Dropdown>
+          </Popover>
         </td>
       </tr>
     ),
@@ -121,6 +133,7 @@ export const InventoryList: FC<InventoryListProps> = props => {
             <Th colName="internalInventoryNo" display="Inventory No" />
             <Th colName="producer" />
             <Th colName="producerCode" display="Producer Code" />
+            <Th colName="isBroken" display="Condition" />
             <th className={useStyles().classes.th}>
               <Text weight={500} size="sm">
                 Actions

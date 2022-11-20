@@ -12,6 +12,7 @@ export type Item = {
   repairUrl?: string
   tradeInUrl?: string
   status?: Status
+  isBroken?: boolean
 }
 
 export type PartialItem = Partial<Item>
