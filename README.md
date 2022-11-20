@@ -1,6 +1,12 @@
-# Pocketbase, Vite, React, and Mantine template
+# Green inventory
 
-Full-stack application template using Pocketbase as backend,
+An application for managing corporate inventory
+in a more sustainable way.
+It encourages companies not to scrap broken devices,
+but rather repair them or trade them in,
+so that the device is reused.
+
+Full-stack application using Pocketbase as backend,
 and Vite + React + Mantine combo as frontend.
 
 
