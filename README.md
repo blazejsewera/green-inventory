@@ -9,6 +9,15 @@ so that the device is reused.
 Full-stack application using Pocketbase as backend,
 and Vite + React + Mantine combo as frontend.
 
+## Screenshots
+
+![Light Mode](img/light-mode.png)
+
+![Dark Mode](img/dark-mode.png)
+
+![Actions](img/actions.png)
+
+![Add Item](img/add-item.png)
 
 ## Cheat sheet
 
